@@ -1,0 +1,366 @@
+/* basic css reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Robot', sans-serif;
+  }
+
+/* General  */
+body {
+    /* height: 100vh;
+    width: 100vw; */
+    /* border: solid 0.5rem green; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* grid container  */
+
+.grid-container {
+    display: grid;
+    grid-template: repeat(1, 1fr 1fr 1fr 1fr 1fr) / repeat(1, 1fr 1fr 1fr 1fr 1fr 1fr); 
+    /* height: 100vh;
+    width: 100vw; */
+    /* border: solid 5px red; */
+    font-size: 2rem;
+    /* font-weight: bold; */
+}
+
+/* Header */
+
+header {
+    grid-area: 1 / 2 / 2 / 7;
+    display: grid;
+}
+
+/* search bar section */
+.search-bar {
+    grid-area: 1 / 2 / 1.5 / 7;
+    /* background-color: aqua; */
+    /* border: solid black 2px; */
+    display: grid;
+    grid-template-columns: repeat(1, 1fr 3fr 1fr 1fr 2fr);
+}
+
+.search-bar div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-bar input {
+    height: 40%;
+    width: 100%;
+    border: none;
+    border-radius:50px;
+    background-color: rgb(226, 226, 226);
+    padding: 0.75rem;
+    font-size: 2rem;
+}
+
+.search-icon, .notification-bell {
+    height: 30%;
+    width: 20%;
+}
+
+.notification-bell {
+    margin-left: auto;
+}
+
+#profile {
+    height: 75%;
+    width: 50%; 
+    object-fit: contain;
+    border-radius:50%;
+}
+
+.search-name {
+    /* grid-area: 1.5 / 2 / 2 / 7; */
+    font-size: 3rem;
+    /* text-align: center; */
+    margin-right: auto;
+}
+
+/* username section */
+
+.user-name {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr 4fr 1fr 1fr 1fr);
+}
+
+.user-name div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#profile-main {
+    height: 100%;
+    width: 70%; 
+    object-fit: contain;
+    border-radius:50%;
+    margin-left: auto;
+}
+
+.username {
+    margin-right: auto;
+    font-size: 1.5rem;
+}
+
+.new, .upload, .share {
+    background-color: rgb(39, 138, 231);
+    width: 80%;
+    height: 40%;
+    color: white;
+    border-radius: 40px;
+    align-self: center;
+}
+
+
+/* Sidebar */
+
+aside {
+    grid-area: 1 / 1 / 6 / 2;
+    background-color: rgb(39, 138, 231);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding-top: 4rem;
+}
+
+.aside-item {
+    /* border: solid 2px rgb(9, 9, 9); */
+    display: flex;
+    height: 10vh;
+    /* justify-content: center; */
+    /* align-items: center; */
+    gap: 10px;
+    padding-left: 15px;
+    font-size: 2.5rem;
+}
+
+.aside-item img {
+    height: 40%;
+}
+
+.aside-item p {
+    margin-top: 2%;
+    font-weight: bold;
+}
+
+
+/* Main */
+
+main {
+    grid-area: 2 / 2 / 6 / 7;
+    background-color: rgb(226, 226, 226);
+    display: grid;
+    grid-template-columns: repeat(1, 1.5fr 1.5fr 1fr);
+    grid-template-rows: repeat(1, 1fr 1fr 1fr);
+    gap: 25px;
+}
+
+
+/* Main-Projects */
+
+.projects {
+    grid-area: 1 / 1 / 4 / 3;
+    /* background-color: white; */
+    display: grid;
+    grid-template-columns: repeat(1, 1fr 1fr);
+    grid-template-rows: repeat(1, 1fr 1fr 1fr);
+    gap: 20px;
+    margin-top: 5%;
+    margin-left: 2%;
+    margin-bottom: 2%;
+}
+
+/* General Project styles */
+
+.project1, .project2, .project3, .project4, .project5, .project6 {
+    background-color: white;
+    border-radius: 20px;
+    border: none;
+    /* height: 80%; */
+}
+
+
+/* Unique Project styles */
+
+
+.project1 {
+    grid-area: 1 / 1 / 2 / 2;
+    /* background-color: aqua; */
+    display: flex;
+    position: relative;
+  
+}
+
+.project2 {
+    grid-area: 1 / 2 / 2 / 3;
+    /* background-color: rgb(75, 157, 157); */
+    display: flex;
+}
+.project3 {
+    grid-area: 2 / 1 / 3 / 2;
+    /* background-color: rgb(6, 44, 44); */
+    display: flex;
+}
+.project4 {
+    grid-area: 2 / 2 / 3 / 3;
+    /* background-color: rgb(67, 83, 204); */
+    display: flex;
+}
+.project5 {
+    grid-area: 3 / 1 / 4 / 2;
+    /* background-color: rgb(240, 170, 126); */
+    display: flex;
+}
+.project6 {
+    grid-area: 3 / 2 / 4 / 3;
+    /* background-color: rgb(130, 201, 108); */
+    display: flex;
+}
+
+/* Project Title */
+
+.your-projects {
+    position: absolute;
+    top: -15%;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+/* Project Cards */
+
+.card1 {
+    background-color: orange;
+    width: 2%;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.content1 {
+    border: none;
+    width: 100%;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display: grid;
+    grid-template: repeat(1, 2.5fr 1fr) / repeat(1, 1fr);
+}
+
+.content1-child1 {
+    /* border: solid 2px black; */
+    border-top-right-radius: 20px;
+    font-size: 1.75rem;
+    padding-left: 4%;
+    padding-top: 10%;
+    padding-right: 10%;
+}
+
+.content1-child2 {
+    /* border: solid 2px red; */
+    border-bottom-right-radius: 25px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-right: 10%;
+}
+
+.content1-child2 img {
+    height: 30%;
+    width: 15%;
+}
+
+/* Main-Announcements */
+
+.announcements {
+    grid-area: 1 / 3 / 4 / 4;
+    /* background-color: aquamarine; */
+    display: grid;
+    grid-template-rows: repeat(1, 2fr 1.5fr);
+    grid-template-columns: repeat(1, 2fr);
+    gap: 10%;
+    margin-top: 15%;
+    margin-bottom: 6%;
+    margin-right:5% ;
+}
+
+.announcement1 {
+    grid-area: 1 / 1 / 2 / 2;
+    /* background-color: brown; */
+    /* border: solid 2px rgb(72, 210, 116); */
+    background-color: white;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* align-items: center; */
+    font-size: 1.75rem;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 2%;
+}
+
+.announcement-title {
+    position: absolute; 
+    top: -10%;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-left: -10%;
+}
+
+.announcement2 {
+    grid-area: 2 / 1 / 3 / 2;
+    border-radius: 10px;
+    position: relative;
+    display: grid;
+    grid-template: repeat(1, 1fr 1fr 1fr 1fr) / repeat(1, fr); 
+    /* border: solid 2px red; */
+    background-color: white;
+}
+
+.announcement2 div {
+    /* border: solid 2px red; */
+    display: flex;
+    /* background-color: white; */
+    align-items: center;
+    gap: 10px;
+}
+
+.trending-pic {
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    margin-left: 8%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    overflow: hidden;
+    border: solid 1px gray;
+}
+
+.announcement2 div img {
+    /* border: solid 2px blue; */
+    object-fit: cover;
+    width: 100%;
+    height: 100%; 
+    /* border-radius: 20%; */
+}
+
+.announcement2-title {
+    position: absolute;
+    font-size: 2.5rem;
+    top: -12%;
+    font-weight: bold;
+}
+
+.styled-break {
+    border: none;          /* Remove the default border */
+    border-top: 1px solid rgb(164, 160, 160);  /* Add a custom line */
+    margin: 10px 0;        /* Adjust space before and after */
+    width: 95%;           /* Control the width of the line */
+}
